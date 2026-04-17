@@ -1,10 +1,10 @@
 {
-  "name": "get-video",
+  "name": "grab-video",
   "version": "1.0.0",
   "description": "Download videos from YouTube, Instagram, TikTok, Facebook, Twitter, and 1000+ sites — one command",
   "main": "bin/download-video.js",
   "bin": {
-    "get-video": "bin/download-video.js"
+    "grab-video": "bin/download-video.js"
   },
   "scripts": {
     "start": "node bin/download-video.js"
@@ -25,12 +25,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fix2015/get-video.git"
+    "url": "git+https://github.com/fix2015/grab-video.git"
   },
   "bugs": {
-    "url": "https://github.com/fix2015/get-video/issues"
+    "url": "https://github.com/fix2015/grab-video/issues"
   },
-  "homepage": "https://github.com/fix2015/get-video#readme",
+  "homepage": "https://github.com/fix2015/grab-video#readme",
   "engines": {
     "node": ">=14.0.0"
   },
