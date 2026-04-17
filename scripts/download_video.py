@@ -18,10 +18,9 @@ def get_format_selector(quality, audio_only=False):
         return "bestaudio/best"
 
     if quality == "best":
-        return "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best"
+        return "bestvideo+bestaudio/best"
 
-    # Limit to specific resolution
-    return f"bestvideo[height<={quality}][ext=mp4]+bestaudio[ext=m4a]/best[height<={quality}][ext=mp4]/best[height<={quality}]/best"
+    return f"bestvideo[height<={quality}]+bestaudio/best[height<={quality}]/best"
 
 
 def list_formats(url, cookies=None):
@@ -118,6 +117,19 @@ def download(url, quality="best", output_dir=".", audio_only=False,
         "quiet": False,
         "no_warnings": False,
         "progress_hooks": [progress_hook],
+        # Use multiple clients to avoid 403 errors on YouTube
+        "extractor_args": {
+            "youtube": {
+                "player_client": ["tv", "web_safari", "web"],
+            }
+        },
+        "http_headers": {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+        },
+        "retries": 3,
+        "fragment_retries": 3,
+        "sleep_interval": 1,
+        "max_sleep_interval": 5,
     }
 
     if audio_only:
