@@ -1,6 +1,6 @@
 {
   "name": "grab-video",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Download videos from YouTube, Instagram, TikTok, Facebook, Twitter, and 1000+ sites — one command",
   "main": "bin/download-video.js",
   "bin": {

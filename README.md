@@ -1,8 +1,8 @@
-# download-video
+# grab-video
 
 > Download videos from YouTube, Instagram, TikTok, Facebook, Twitter, and 1000+ sites — one command.
 
-[![npm version](https://img.shields.io/npm/v/download-video.svg)](https://www.npmjs.com/package/download-video)
+[![npm version](https://img.shields.io/npm/v/grab-video.svg)](https://www.npmjs.com/package/grab-video)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Powered by yt-dlp. Free and unlimited. No API key needed.
@@ -10,7 +10,7 @@ Powered by yt-dlp. Free and unlimited. No API key needed.
 ## Quick Start
 
 ```bash
-npx download-video "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+npx grab-video "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
 ```
 
 ## Prerequisites
@@ -24,96 +24,96 @@ npx download-video "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
 
 ```bash
 # YouTube
-npx download-video "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+npx grab-video "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
 
 # Instagram
-npx download-video "https://www.instagram.com/reel/ABC123/"
+npx grab-video "https://www.instagram.com/reel/ABC123/"
 
 # TikTok
-npx download-video "https://www.tiktok.com/@user/video/123456"
+npx grab-video "https://www.tiktok.com/@user/video/123456"
 
 # Facebook
-npx download-video "https://www.facebook.com/watch?v=123456"
+npx grab-video "https://www.facebook.com/watch?v=123456"
 
 # Twitter / X
-npx download-video "https://x.com/user/status/123456"
+npx grab-video "https://x.com/user/status/123456"
 
 # Telegram
-npx download-video "https://t.me/channel/123"
+npx grab-video "https://t.me/channel/123"
 
 # Reddit
-npx download-video "https://reddit.com/r/sub/comments/abc123/title/"
+npx grab-video "https://reddit.com/r/sub/comments/abc123/title/"
 ```
 
 ### Choose quality
 
 ```bash
-npx download-video "URL" --quality 720
-npx download-video "URL" --quality 1080
-npx download-video "URL" --quality 360    # Save bandwidth
-npx download-video "URL" --quality best   # Default
+npx grab-video "URL" --quality 720
+npx grab-video "URL" --quality 1080
+npx grab-video "URL" --quality 360    # Save bandwidth
+npx grab-video "URL" --quality best   # Default
 ```
 
 ### Audio only (MP3)
 
 ```bash
-npx download-video "URL" --audio-only
+npx grab-video "URL" --audio-only
 ```
 
 ### Save to folder
 
 ```bash
-npx download-video "URL" --output ./downloads/
+npx grab-video "URL" --output ./downloads/
 ```
 
 ### Download playlist
 
 ```bash
-npx download-video "https://youtube.com/playlist?list=PLxxx" --playlist
+npx grab-video "https://youtube.com/playlist?list=PLxxx" --playlist
 ```
 
 ### Download with subtitles
 
 ```bash
-npx download-video "URL" --subs
-npx download-video "URL" --subs --subs-lang es    # Spanish
+npx grab-video "URL" --subs
+npx grab-video "URL" --subs --subs-lang es    # Spanish
 ```
 
 ### List formats
 
 ```bash
-npx download-video "URL" --formats
+npx grab-video "URL" --formats
 ```
 
 ### Show metadata
 
 ```bash
-npx download-video "URL" --metadata
+npx grab-video "URL" --metadata
 ```
 
 ### Download thumbnail
 
 ```bash
-npx download-video "URL" --thumbnail
+npx grab-video "URL" --thumbnail
 ```
 
 ### Rate limiting
 
 ```bash
-npx download-video "URL" --limit-rate 1M     # 1 MB/s max
-npx download-video "URL" --limit-rate 500K    # 500 KB/s max
+npx grab-video "URL" --limit-rate 1M     # 1 MB/s max
+npx grab-video "URL" --limit-rate 500K    # 500 KB/s max
 ```
 
 ### Private / age-restricted videos
 
 ```bash
-npx download-video "URL" --cookies ./cookies.txt
+npx grab-video "URL" --cookies ./cookies.txt
 ```
 
 ### Update yt-dlp
 
 ```bash
-npx download-video update
+npx grab-video update
 ```
 
 ## Options
@@ -140,7 +140,7 @@ YouTube, Instagram, TikTok, Facebook, Twitter/X, Telegram, Reddit, Vimeo, Twitch
 Full list: https://github.com/yt-dlp/yt-dlp/blob/master/supportedsites.md
 
 ```bash
-npx download-video sites
+npx grab-video sites
 ```
 
 ## How It Works
