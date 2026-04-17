@@ -1,0 +1,47 @@
+{
+  "name": "download-video",
+  "version": "1.0.0",
+  "description": "Download videos from YouTube, Instagram, TikTok, Facebook, Twitter, and 1000+ sites — one command",
+  "main": "bin/download-video.js",
+  "bin": {
+    "download-video": "bin/download-video.js"
+  },
+  "scripts": {
+    "start": "node bin/download-video.js"
+  },
+  "keywords": [
+    "download",
+    "video",
+    "youtube",
+    "instagram",
+    "tiktok",
+    "facebook",
+    "twitter",
+    "yt-dlp",
+    "cli",
+    "downloader"
+  ],
+  "author": "fix2015",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fix2015/download-video.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fix2015/download-video/issues"
+  },
+  "homepage": "https://github.com/fix2015/download-video#readme",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "files": [
+    "bin/",
+    "scripts/",
+    "README.md",
+    "LICENSE"
+  ],
+  "dependencies": {
+    "commander": "^11.1.0",
+    "chalk": "^4.1.2"
+  }
+}
