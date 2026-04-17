@@ -62,7 +62,7 @@ function runPython(args) {
 }
 
 program
-  .name('download-video')
+  .name('get-video')
   .version(pkg.version)
   .description(
     'Download videos from YouTube, Instagram, TikTok, Facebook, Twitter, and 1000+ sites.\n\n' +
@@ -72,31 +72,31 @@ program
 ${chalk.bold('Examples:')}
 
   ${chalk.dim('# Download a YouTube video')}
-  download-video "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+  get-video "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
 
   ${chalk.dim('# Download Instagram reel')}
-  download-video "https://www.instagram.com/reel/ABC123/"
+  get-video "https://www.instagram.com/reel/ABC123/"
 
   ${chalk.dim('# Download TikTok video')}
-  download-video "https://www.tiktok.com/@user/video/123456"
+  get-video "https://www.tiktok.com/@user/video/123456"
 
   ${chalk.dim('# Choose quality')}
-  download-video "https://youtube.com/watch?v=..." --quality 720
+  get-video "https://youtube.com/watch?v=..." --quality 720
 
   ${chalk.dim('# Audio only (MP3)')}
-  download-video "https://youtube.com/watch?v=..." --audio-only
+  get-video "https://youtube.com/watch?v=..." --audio-only
 
   ${chalk.dim('# Save to specific folder')}
-  download-video "https://youtube.com/watch?v=..." --output ./downloads/
+  get-video "https://youtube.com/watch?v=..." --output ./downloads/
 
   ${chalk.dim('# List available formats')}
-  download-video "https://youtube.com/watch?v=..." --formats
+  get-video "https://youtube.com/watch?v=..." --formats
 
   ${chalk.dim('# Download with subtitles')}
-  download-video "https://youtube.com/watch?v=..." --subs
+  get-video "https://youtube.com/watch?v=..." --subs
 
   ${chalk.dim('# Download entire playlist')}
-  download-video "https://youtube.com/playlist?list=PLxxx"
+  get-video "https://youtube.com/playlist?list=PLxxx"
 
 ${chalk.bold('Supported sites:')} YouTube, Instagram, TikTok, Facebook, Twitter/X,
   Telegram, Reddit, Vimeo, Twitch, Dailymotion, SoundCloud, and 1000+ more.
@@ -108,7 +108,7 @@ program
   .command('setup')
   .description('Check Python and install yt-dlp')
   .action(() => {
-    console.log(chalk.bold('\ndownload-video setup\n'));
+    console.log(chalk.bold('\nget-video setup\n'));
 
     if (!checkPython()) {
       console.error(chalk.red('  Python 3 not found.'));
@@ -122,7 +122,7 @@ program
       console.log(chalk.green('  yt-dlp installed'));
     }
 
-    console.log(chalk.bold('\n  Ready! Try: download-video "https://youtube.com/watch?v=..."\n'));
+    console.log(chalk.bold('\n  Ready! Try: get-video "https://youtube.com/watch?v=..."\n'));
   });
 
 // ---- UPDATE ----
